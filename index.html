@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-tac-toe</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <h1 style="text-align: center;">Tic-tac-toe</h1>
+  <div class="player">
+    <h3 class="blink" id="winner" style="display: none;">It is a tie!</h3>
+    <h3 style="display: block;" id="player-x">Player X, it is your turn.</h3>
+    <h3 style="display: none;" id="player-o">Player O, it is your turn.</h3>
+  </div>
+
+  <table class="score">
+    <tr>
+      <td>X</td>
+      <td>O</td>
+    </tr>
+    <tr>
+      <td class="score-x">0</td>
+      <td class="score-o">0</td>
+    </tr>
+  </table>
+
+  <table class="game-board">
+    <tr>
+      <td class="r1 c1 d1">&nbsp;</td>
+      <td class="r1 c2">&nbsp;</td>
+      <td class="r1 c3 d2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="r2 c1 r2-c1">&nbsp;</td>
+      <td class="r2 c2 d1 d2">&nbsp;</td>
+      <td class="r2 c3">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="r3 c1 d2">&nbsp;</td>
+      <td class="r3 c2">&nbsp;</td>
+      <td class="r3 c3 d1">&nbsp;</td>
+    </tr>
+  </table>
+
+  <div class="footer">
+    <p>Created 2014 Triangle717 <span class="pipe">|</span> <a target="_blank" href="https://twitter.com/_le717">@_le717</a>
+      <span class="pipe">|</span> <a target="_blank" href="http://le717.github.io">Triangle Land</a></p>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

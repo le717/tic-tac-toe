@@ -1,0 +1,141 @@
+@charset "utf-8";
+/*
+ * Tic-tac-toe
+ * Created 2014 Triangle717
+ * <http://le717.github.io/>
+ *
+ * License under the MIT License
+ * <http://opensource.org/licenses/MIT/>
+ */
+
+
+::-moz-selection { background-color: #0E69D2; }
+::selection { background-color: #0E69D2; }
+
+body {
+  background: #fff url("../img/paper.jpg") no-repeat top left;
+  background-size: cover;
+  font-family: "Comic Sans MS", Impact, sans-serif;
+  line-height: 1;
+  letter-spacing: 2px;
+  color: #a09999;
+  text-shadow: 1px 1px 1px #000;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(226, 255, 0);
+}
+a:hover { text-decoration: underline; }
+
+/* ------- Current player ------- */
+.player {
+  font-size: 1.1em;
+  text-align: center;
+}
+
+/* ------- Score chart ------- */
+.score {
+  border-collapse: collapse;
+  position: fixed;
+  top: 10%;
+  right: 12%;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+/* Spacing */
+.score td {
+  padding: 0.15em;
+  width: 0.6em;
+}
+
+/* Borders */
+.score td:nth-child(1) { border-right: 2px solid #000; }
+.score tr:nth-child(1) {
+  font-size: 1.5em;
+}
+.score tr:nth-child(2) td {
+  border-top: 2px solid #000;
+  font-size: 3em;
+}
+
+/* ------- Game board ------- */
+.game-board {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Letter size
+ * This also affects the table size
+ */
+.game-board tr,
+.game-board td { font-size: 3em; }
+
+/* Board size and borders */
+.game-board td {
+  width: 1em;
+  cursor: pointer;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+}
+
+/* Selectively remove some of the borders */
+.game-board td:nth-child(1) { border-left: none;}
+.game-board .r3 { border-bottom: none; }
+
+/* Colorize the letters */
+.marker-x { color: #00f; cursor: default; }
+.marker-o { color: #f00; cursor: default; }
+
+/* ------- Footer ------- */
+.footer {
+  position: fixed;
+  margin-left: -1%;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 5px #000;
+          box-shadow: 0 0 5px #000;
+  z-index: 2;
+}
+
+.footer p {
+  font-family: "Open Sans", "Century Gothic", Arial, sans-serif;
+  font-size: 0.9em;
+  line-height: 1.1;
+  letter-spacing: normal;
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+/* Adapt the footer to smaller screens */
+@media only screen and (max-width: 700px) { .pipe { display: none; } }
+
+
+/* -------- Recreate the <blink> tag >:-D ------- */
+.blink {
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes blink {
+  0% { opacity: 1; }
+  75% { opacity: 1; }
+  76% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  75% { opacity: 1; }
+  76% { opacity: 0; }
+  100% { opacity: 0; }
+}
