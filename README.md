@@ -1,6 +1,8 @@
 # Tic-tac-toe #
 
-> Written in HTML, CSS, and pure JavaScript.
+> Tic-tac-toe written in HTML, CSS, and pure JavaScript.
+
+Play at [le717.github.io/tic-tac-toe](http://le717.github.io/tic-tac-toe/)
 
 ## License ##
 Licensed under [The MIT License](LICENSE)
