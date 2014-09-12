@@ -2,6 +2,8 @@
 
 > Tic-tac-toe written in HTML, CSS, and pure JavaScript.
 
+This was a project I did in JavaScript class, at the request of my instructor. No jQuery has been used per his request. `localStorage` has also been utilized to save your playing scores.
+
 Play at [le717.github.io/tic-tac-toe](http://le717.github.io/tic-tac-toe/)
 
 ## License ##
