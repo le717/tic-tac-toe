@@ -28,6 +28,31 @@ a {
 }
 a:hover { text-decoration: underline; }
 
+/* Action buttons */
+.button {
+  display: inline;
+  position: relative;
+  width: 12%;
+  height: 10%;
+  float: right;
+  bottom: 10em;
+  left: -13%;
+  margin-right: 0.188em;
+  margin-bottom: 0.313em;
+  background-color: rgba(255, 255, 0, 0.5);
+  box-shadow: 0 0 3px 1px #000;
+  border-radius: 1.25em;
+  text-align: center;
+  line-height: 2;
+}
+.button:hover { text-decoration: underline; }
+
+/* Put the new game button on top */
+.game-new {
+  display: block;
+  margin-top: -3%;
+}
+
 /* ------- Current player ------- */
 .player {
   font-size: 1.1em;
@@ -67,7 +92,8 @@ a:hover { text-decoration: underline; }
   text-align: center;
 }
 
-/* Letter size
+/*
+ * Letter size
  * This also affects the table size
  */
 .game-board tr,
@@ -77,8 +103,8 @@ a:hover { text-decoration: underline; }
 .game-board td {
   width: 1em;
   cursor: pointer;
-  border-bottom: 1px solid #000;
-  border-left: 1px solid #000;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 /* Selectively remove some of the borders */

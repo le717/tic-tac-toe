@@ -1,4 +1,4 @@
-/* jshint strict: true, browser: true */
+/* jshint strict: true, browser: true, devel: true */
 /*
  * Tic-tac-toe
  * Created 2014 Triangle717
@@ -15,7 +15,7 @@ var playerX       = document.querySelector("#player-x"),
     winsX         = document.querySelector(".score-x"),
     winsO         = document.querySelector("score-o"),
     tableSquares  = document.querySelectorAll(".game-board td"),
-    possibleMoves = 72;
+    possiblePlays = 72;
 
 
 /**
@@ -129,7 +129,7 @@ function checkIfWon(playerName) {
 
       // A match was not found
     } else {
-      possibleMoves -= 1;
+      possiblePlays -= 1;
     }
   }
 
@@ -138,7 +138,7 @@ function checkIfWon(playerName) {
     youWin(playerName);
 
     // Nope.avi
-  } else if (!hasThreeInARow && possibleMoves === 0) {
+  } else if (!hasThreeInARow && possiblePlays === 0) {
     youWin("nobody");
   }
 }
@@ -173,18 +173,6 @@ function makeMove(e) {
 
 
 /**
- * Reset saved games scores
- * TODO Connect this to...
- * something and make it an anonymous function
- */
-function resetGame() {
-  "use strict";
-  localStorage.clear();
-  window.location.reload();
-}
-
-
-/**
  * @private
  * Game initialization
  */
@@ -210,6 +198,26 @@ function _startGame() {
     }
   }
 }
+
+
+/**
+ * Reset saved games scores
+ */
+document.querySelector(".game-reset").addEventListener("click", function() {
+  "use strict";
+  localStorage.clear();
+  window.location.reload();
+}, true);
+
+
+/**
+ * Start new game
+ */
+document.querySelector(".game-new").addEventListener("click", function() {
+  "use strict";
+  window.location.reload();
+}, true);
+
 
 // Start the game
 window.onload = _startGame();
